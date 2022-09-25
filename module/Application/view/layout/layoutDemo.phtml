@@ -1,0 +1,121 @@
+<?= $this->doctype() ?>
+
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>RUMAH SAKIT</title>
+
+      <!-- Custom fonts for this template-->
+  
+    </head>
+  <link rel="stylesheet" href="./plugins/slick-1.8.1/slick.css">
+  <link rel="stylesheet" href="./plugins/fancybox-master/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="./plugins/aos-animation/aos.css">
+  <!-- fonts -->
+  <link rel="stylesheet" href="./fonts/ep-icon-fonts/css/style.css">
+  <link rel="stylesheet" href="./fonts/fontawesome-5/css/all.min.css">
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="./css/settings.css">
+  <link rel="stylesheet" href="./css/style.css">
+    
+    <?= $this->headLink(['rel' => 'sylesheet', 'type' => 'text/css'])
+                ->prependStylesheet($this->basePath('template_umum/plugins/bootstrap-4.3.1/css/bootstrap.min.css'))
+                ->prependStylesheet($this->basePath('template_umum/plugins/meanmenu/meanmenu.css'))
+                ->prependStylesheet($this->basePath('template_umum/plugins/slick-1.8.1/slick.css'))
+                ->prependStylesheet($this->basePath('template_umum/plugins/fancybox-master/jquery.fancybox.min.css'))
+                ->prependStylesheet($this->basePath('template_umum/fonts/ep-icon-fonts/css/style.css'))
+                ->prependStylesheet($this->basePath('template_umum/fonts/fontawesome-5/css/all.min.csss'))
+
+
+                
+         
+  
+    ?>
+<body>
+<body >
+<div class="site-wrapper">
+<!-- Header Starts -->
+  <header class="site-header position-relative">
+        <div class="container">
+            <div class="row justify-content-center align-items-center position-relative">
+                <div class="col-sm-3 col-6 col-lg-2 col-xl-2 order-lg-1">
+                  <!-- Brand Logo -->
+                    <div class="brand-logo">
+                        <a href=""><img src="image/main-logo.png" alt="" /></a>
+                    </div>
+                </div>
+                <div class="col-sm-8 col-lg-2 col-xl-2 d-none d-sm-block order-lg-3">
+                    <div class="header-btns justify-content-end">
+                        <a href="#" class="btn btn-link">Sign In</a>
+                    </div>
+                </div>
+                <!-- Menu Block -->
+                <div class="col-sm-1 col-6 col-lg-6 col-xl-6 offset-lg-2  position-static order-lg-2">
+                    <div class="main-navigation">
+                        <ul class="main-menu">
+                            <li class="menu-item has-dropdown">
+                                <a href="#features">Free Landing Pages</a>
+                                    <ul class="menu-dropdown">
+                                        <li class="single-item">
+                                            <a href="">
+                                            <h3>Mobile Application</h3> 
+                                            <p>Best for Mobile App Presentation</p>
+                                            </a>
+                                        </li>
+                                        <li class="single-item">
+                                            <a href="">
+                                                <h3>Web Application</h3>
+                                                <p>Best for Mobile App Presentation</p>
+                                            </a> 
+                                        </li>
+                                        <li class="single-item">
+                                            <a href="">
+                                                <h3>SaaS Application</h3>
+                                            <p>Best for Mobile App Presentation</p>
+                                        </a> 
+                                        </li>
+                                        <li class="single-item">
+                                            <a href="">
+                                                    <h3> SaaS Subscription</h3>
+                                                <p>Best for Mobile App Presentation</p>
+                                            </a> 
+                                        </li>
+                                    </ul>
+                                </li>
+                            <li class="menu-item "><a href="#features">Course topics</a></li>
+                    
+                            <li class="menu-item"><a href="#">Student stories</a></li>
+                            </ul>
+                    </div>
+                    <div class="mobile-menu"></div>
+                </div>
+            </div>
+        </div>
+        <div class="shape-holder header-shape" data-aos="fade-down" data-aos-once="true"><img src="image/header-shape.svg" alt=""></div>
+  </header>
+
+  
+   
+            <?= $this->content ?>
+         
+          <!-- Core JS files -->        <script type="text/javascript" src="<?php $this->basePath();?> /tamplateadmin/assets/js/plugins/notifications/sweet_alert.min.js"></script>
+	    <!-- /core JS files -->
+
+        <?= $this->headScript()
+             ->prependFile($this->basePath('js/bootstrap.min.js'))
+            ->prependFile($this->basePath('js/jquery-3.1.0.min.js'))
+            ->prependFile(('https://js.pusher.com/7.0/pusher.min.js'))
+        
+          
+          
+			
+		
+		?>
+        <?= $this->inlineScript() ?>
+    </body>
+</html>

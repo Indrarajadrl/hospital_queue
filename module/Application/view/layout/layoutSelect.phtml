@@ -1,0 +1,108 @@
+<?= $this->doctype() ?>
+
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>RUMAH SAKIT</title>
+
+      <!-- Custom fonts for this template-->
+  
+    </head><style>
+    body {
+      background-color: #e74c3c;
+      font-family: 'Source Sans Pro', sans-serif;
+
+    }
+    .demo {
+      margin: 100px auto;
+    }
+
+    .dropdown-container {
+      width: 250px;
+      margin: 100px auto;
+      position: relative;
+    }
+
+    select {
+      width: 100%;
+      height: 50;
+      font-size: 200%;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 0;
+      background-color: #c0392b;
+      border: none;
+      border-bottom: 2px solid #962d22;
+      color: white;
+      appearance: none;
+      padding: 10px;
+      padding-right: 38px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      transition: color 0.3s ease, background-color 0.3s ease, border-bottom-color 0.3s ease;
+    }
+
+    /* For IE <= 11 */
+    select::-ms-expand {
+      display: none; 
+    }
+
+    .select-icon {
+      position: absolute;
+      top: 4px;
+      right: 4px;
+      width: 30px;
+      height: 36px;
+      pointer-events: none;
+      border: 2px solid #962d22;
+      padding-left: 5px;
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+    .select-icon svg.icon {
+      transition: fill 0.3s ease;
+      fill: white;
+    }
+
+    select:hover,
+    select:focus {
+      color: #c0392b;
+      background-color: white;
+      border-bottom-color: #DCDCDC;
+    }
+    select:hover ~ .select-icon,
+    select:focus ~ .select-icon {
+      background-color: white;
+      border-color: #DCDCDC;
+    }
+    select:hover ~ .select-icon svg.icon,
+    select:focus ~ .select-icon svg.icon {
+      fill: #c0392b;
+    }
+
+  </style>
+<body>
+  
+   
+            <?= $this->content ?>
+         
+          <!-- Core JS files -->        <script type="text/javascript" src="<?php $this->basePath();?> /tamplateadmin/assets/js/plugins/notifications/sweet_alert.min.js"></script>
+	    <!-- /core JS files -->
+
+        <?= $this->headScript()
+             ->prependFile($this->basePath('js/bootstrap.min.js'))
+            ->prependFile($this->basePath('js/jquery-3.1.0.min.js'))
+            ->prependFile(('https://js.pusher.com/7.0/pusher.min.js'))
+        
+          
+          
+			
+		
+		?>
+        <?= $this->inlineScript() ?>
+    </body>
+</html>

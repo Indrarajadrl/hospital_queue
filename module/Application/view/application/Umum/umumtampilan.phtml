@@ -1,0 +1,86 @@
+<script type="text/javascript"> 
+    // 1 detik = 1000 
+     window.setTimeout("waktu()",1000); 
+    function waktu() {
+    var tanggal = new Date(); 
+    setTimeout("waktu()",1000); 
+    document.getElementById("tanggalku").innerHTML 
+    = tanggal.getHours()+":"+tanggal.getMinutes()+":"+tanggal.getSeconds(); 
+    } 
+</script> 
+
+
+<!-- Page header -->
+<div class="row">
+        <div class="page-header" style="border-bottom: 0px solid #ddd0;">
+         <!-- Header content -->
+            <div class="page-header-content">
+                <div class="page-title">
+                    <h4 style="color: #fff;font-size:35px;"><span class="text-semibold">Rumah Sakit - Mohon Antri Dengan Tertib</span></h4>
+                
+                </div> 
+                    
+                    <div class="page-header-content">
+                        <div class="heading-btn-group">
+                            <div style="color: #fff9ff;font-size: 25px;font-weight: 600;">
+                                    <?php echo $this->today; ?>
+                                    <span id="tanggalku"></span>
+                              
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+ </div> 
+
+
+ 
+
+<div class="justify-content-center"> 
+<div  class="col-sm-200" >
+<audio id="MyAudioElement" autoplay>
+  <source src="a1.mp3" type="audio/ogg">
+  <source src="a1.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+        <div class="card mb-3 alert alert-info alert-styled-left alert-arrow-left alert-component col-sm-100"  style="border-color: #e94c72;background: #faebd73b;width: 1300px;margin-left: 100px;">
+            <div class="text-center content-group">
+                <div><input type="hidden" value="nomer antrian" id="text-to-speech" placeholder="Enter text to speak..."/></div>
+                    <p class="error-title" style=" font-weight: ;font-size:50px;font-family: Times New Roman, Times, serif;color:	#fff"><span > Nomer</span></p>
+                    
+                    <h1 class="error-title" style=" font-weight: bold;font-size:100px;font-family: Times New Roman, Times, serif;color:	#fff"><span id="no_antrian_panggil"></span></h1>
+                
+                    <p class="error-title" style=" font-weight: ;font-size:50px;font-family: Times New Roman, Times, serif;color:	#fff"><span > Silahkan Menuju Ke</span></p>  
+                    <p class="error-title" style=" font-weight: ;font-size:50px;font-family: Times New Roman, Times, serif;color:	#fff"><span id="ruang_panggil"></span></p>  
+              
+                <!-- <div><input type="hidden" value="no_antrian" id="no_antrian" /></div>
+                <div><input type="hidden" value="nama_ruang" id="nama_ruang" /><span style="visibility:hidden" id="nama_ruang"></span></div>  -->
+            </div>
+        </div>
+
+        <div id="listdata" class="card-deck" style="padding-left: 100px;padding-right: 100px;width: 2000px;">
+    </div>
+    </div> 
+</div>
+
+   
+
+<!--  
+<div  class="col-md-7 mt-25">
+        <div class="card mb-3">
+            <div class="text-center content-group">
+                <div><input type="hidden" value="nomer antrian" id="text-to-speech" placeholder="Enter text to speak..."/></div>
+                    <p class="error-title" style=" font-weight: ;font-size:50px;font-family: Times New Roman, Times, serif;color:	grey"><span > Number</span></p>
+                    
+                    <h1 class="error-title" style=" font-weight: bold;font-size:215px;font-family: Times New Roman, Times, serif;color:	red"><span id="no_antrian"></span></h1>
+                
+                    <p class="error-title" style=" font-weight: ;font-size:50px;font-family: Times New Roman, Times, serif;color:	grey"><span > Please Proceed To</span></p>  
+                    <p class="error-title" style=" font-weight: ;font-size:50px;font-family: Times New Roman, Times, serif;color:	red"><span > Ruang 1.1</span></p>  
+              
+                <div><input type="hidden" value="no_antrian" id="no_antrian" /></div>
+                <div><input type="hidden" value="nama_ruang" id="nama_ruang" /><span style="visibility:hidden" id="nama_ruang"></span></div> -->
+            <!-- </div>
+        </div>
+    </div> -->

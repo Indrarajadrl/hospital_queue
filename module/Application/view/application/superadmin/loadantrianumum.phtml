@@ -1,0 +1,93 @@
+<!-- <script type="text/javascript"> 
+    // 1 detik = 1000 
+     window.setTimeout("waktu()",1000); 
+    function waktu() {
+    var tanggal = new Date(); 
+    setTimeout("waktu()",1000); 
+    document.getElementById("tanggalku").innerHTML 
+    = tanggal.getHours()+":"+tanggal.getMinutes()+":"+tanggal.getSeconds(); 
+    } 
+</script>  -->
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div style="margin-top:-100px;">
+    <input type="hidden" id="valCounter">
+    <!-- Page header -->
+    <div class="page-header" style="border-bottom: 0px solid #ddd0;">
+
+        <!-- Header content -->
+        <div class="page-header-content">
+            <div class="page-title">
+                <h4 style="font-size:35px;"><span class="text-semibold">Rumah Sakit - Mohon Antri Dengan Tertib</span></h4>
+              </div> 
+
+
+            <div class="heading-elements">
+                <div class="heading-btn-group">
+                    <div style="color: #fff9ff;font-size: 50px;font-weight: 600;margin-top:-20px;">
+                         <span id="tanggalku"></span>
+                    </div>
+                   <div style="color: #fff9ff;font-size: 17px;font-weight: 600;margin-top:-20px;">
+                        <?php echo $this->today; ?>
+                    </div> 
+                </div>
+            </div>
+        </div>
+        <!-- /header content -->
+    </div>
+    <!-- /page header -->
+
+
+    <!-- Content area -->
+    <div class="content">
+
+        <!-- User profile -->
+        <div class="row">
+
+            <div class="col-lg-12">
+
+                <div class="alert alert-component" style="border-color: #00FA9A;background: #faebd73b;width: 1110px; height: 80px;">
+                   <div class="row justify-content-center">
+                   <form class="form-inline" ">
+                    
+                    <div class="form-group form-control-lg ">
+                            <label class="text-semibold" style="font-size: 35px;color:#fff;"> Poli</label><br>
+                            <select style="width:100px;height:40px;font-size: 25px" name="nama_poli" id="poli" class="form-control" >
+                            <option disabled selected > Pilih </option>
+                            </select> 
+                        </div>
+                        <div class="form-group form-control-lg">
+                            <label class="text-semibold" style="font-size: 30px;color:#fff;">Dokter</label> <br>
+                            <select  style="width:100px;height:40px;font-size: 25px" id="dokter" name="nama_dokter" class="form-control">
+                            <option disabled selected> Pilih </option>
+                            </select>
+                        </div>
+                     </form>
+                   
+                   </div>
+                               
+                </div>
+
+                <!-- Navigation -->
+                <div class="alert alert-component" style="border-color: #00FA9A;background: #faebd73b;width: 1110px; height: 240px;">
+                    <h1 class="alert-heading text-semibold text-center" style="font-size: 40px;color:#fff;">NOMOR ANTRIAN</h1>
+                    <center><code class="text-center" style="font-size: 100px; padding: 20px; background-color: #00FA9A;color: #ffffff;"><span id="no_antrian"></span></code></center>
+                </div>
+                <!-- /navigation -->
+
+            </div>
+        </div>
+
+    </div>
+    <!-- /content area -->
+
+</div>

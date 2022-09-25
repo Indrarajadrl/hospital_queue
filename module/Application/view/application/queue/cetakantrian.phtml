@@ -1,0 +1,118 @@
+
+<br>
+<br>
+<br>
+<br>
+ 
+    <section class="breadcrumb_part breadcrumb_bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb_iner">
+                        <div class="breadcrumb_iner_item">
+                            <h2>Cetak </h2>
+                            <h2>Antrian</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- breadcrumb start-->
+
+
+    <div class="container" id="cobain">
+    
+            <div class="card" >
+                <div class="card-header">
+                <h2> Data Pasien</h2>
+                </div>
+                <div class="card-body">
+                <div class="panel panel-white" id="print">
+                    <div class="row">
+                        <div class="col-sm-2">
+                        <h3>No Rekam Medis</h3>
+                        </div>
+                        <div class="col-sm-1">
+                        <h3>:</h3>
+                        </div>
+                        <div class="col-sm-6">
+                        <h3><?php echo $this->no_rekam_medis ?></h3>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-2">
+                        <h3>Nama pasien</h3>
+                        </div>
+                        <div class="col-sm-1">
+                        <h3>:</h3>
+                        </div>
+                        <div class="col-sm-6">
+                        <h3><?php echo $this->nama ?></h3>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-2">
+                        <h3>Poli</h3>
+                        </div>
+                        <div class="col-sm-1">
+                        <h3>:</h3>
+                        </div>
+                        <div class="col-sm-6">
+                        <h3><?php echo $this->kode_poli ?></h3>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-2">
+                        <h3>Dokter</h3>
+                        </div>
+                        <div class="col-sm-1">
+                        <h3>:</h3>
+                        </div>
+                        <div class="col-sm-6">
+                        <h3><?php echo $this->nama_dokter ?>
+                        </label></h3>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-2">
+                        <h3>No Antrian</h3>
+                        </div>
+                        <div class="col-sm-1">
+                        <h3>:</h3>
+                        </div>
+                        <div class="col-sm-6">
+                        <h3><?php echo $this->kode_dokter ?><?php echo $this->no_antrian ?></label></h3>
+                        </div>
+                    </div>
+                    <br> 
+                    <div class="row">
+                        <div class="col-sm-2">
+                        <h3>Sisa Antrian</h3>
+                        </div>
+                        <div class="col-sm-1">
+                        <h3>:</h3>
+                        </div>
+                        <div class="col-sm-6">
+                        <h3><?php echo $this->sisa_antrian ?></label></h3>
+                        </div>
+                    </div>
+                    <br>
+            </div>
+            </div>
+
+            <div class="card-footer" >
+                <p class="card-text"></p>
+                <button id="cetak" class="btn btn-primary" style="float: right;"> Cetak</button>
+            </div>    
+    </div>
+<br>
+
+ 
+
+
+

@@ -1,0 +1,46 @@
+<?= $this->doctype() ?>
+
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>RUMAH SAKIT</title>
+
+      <!-- Custom fonts for this template-->
+  
+    <?= $this->headLink(['rel' => 'sylesheet', 'type' => 'text/css'])
+                 ->prependStylesheet($this->basePath('tamplateadmin/assets/css/admin.css'))
+         
+            // ->prependStylesheet($this->basePath('tamplateadmin/assets/css/components.css'))
+            
+        //  ?>
+      
+    </head>
+    <style type=text/css>
+
+     </style>
+<body>
+  
+   
+            <?= $this->content ?>
+         
+          <!-- Core JS files -->        <script type="text/javascript" src="<?php $this->basePath();?> /tamplateadmin/assets/js/plugins/notifications/sweet_alert.min.js"></script>
+	    <!-- /core JS files -->
+
+        <?= $this->headScript()
+             ->prependFile($this->basePath('js/bootstrap.min.js'))
+            ->prependFile($this->basePath('js/jquery-3.1.0.min.js'))
+            ->prependFile(('https://js.pusher.com/7.0/pusher.min.js'))
+        
+          
+          
+			
+		
+		?>
+        <?= $this->inlineScript() ?>
+    </body>
+</html>

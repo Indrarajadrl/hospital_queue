@@ -1,0 +1,69 @@
+<style>
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+</style>
+
+
+  <hr>
+  <hr>
+  <hr>
+  <hr>
+ 
+    <section class="breadcrumb_part breadcrumb_bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb_iner">
+                        <div class="breadcrumb_iner_item">
+                            <h2>Registrasi</h2>
+                            <h2>Pasien</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- breadcrumb start-->
+
+         
+    <div class="container">
+        <div class="card" >
+            <div class="card-header">
+                    <h2> Silahkan Isi No Rekam Medis</h2>
+                    </div>
+                <div class="card-body">
+        
+                <form id="myForm">
+                    <input type="hidden" id="iInput"  class="form-control" /></input>
+
+                   
+                    <div class="form-group">
+                         <label> <h5>No Rekam Medis</h5></label><br>
+                        <input type="text" id="no_rekam_medis"  class="form-control"  placeholder="No Rekam Medis"  class="form-control" max="999999999999999" maxlength="8"></input>
+                    </div>
+                   
+                    <p class="card-text" style="display:inline">Jika belum mempunyai no rekam medis, </p>
+                    <a class="card-text" href="<?php echo $this->basePath('queue/daftarpasien') ?>" style="display:inline">Klik disini !</a>
+                </form>
+            </div>
+                <div class="card-footer" >
+                     <p class="card-text"></p>
+                        <button type="button"  class="btn btn-primary" id="cekdata" style="float: right;">Daftar Antrian</button>
+                </div>    
+        
+        </div>
+    </div> 
+    <br>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,163 @@
+<?= $this->doctype() ?>
+
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Antrian </title>
+ <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+      <!-- Custom fonts for this template-->
+    <?= $this->headLink(['rel' => 'sylesheet', 'type' => 'text/css' , 'href' => $this->basePath() . '/tamplate/img/favicon.png'])
+          ->prependStylesheet($this->basePath('/tamplateadmin/vendor/fontawesome-free/css/all.min.css'))
+          ->prependStylesheet($this->basePath('/tamplateadmin/css/sb-admin-2.min.css'))
+           ->prependStylesheet($this->basePath('/tamplateadmin/assets/css/colors.css'))
+          ->prependStylesheet($this->basePath('/tamplateadmin/assets/css/icons/icomoon/styles.css'))
+          ->prependStylesheet($this->basePath('/tamplateadmin/css/swich-alert.css'))
+          ->prependStylesheet($this->basePath('/tamplateadmin/css/bootbox.css'))
+          ->prependStylesheet($this->basePath('/tamplateadmin/vendor/datatables/dataTables.bootstrap4.min.css'))
+          ->prependStylesheet($this->basePath('/css/dasboard.css'))
+          
+          // ->prependStylesheet($this->basePath('/tamplateadmin/assets/css/bootstrap.css'))
+  
+      ?>
+  
+      <style type="text/css">
+        .dataTables_filter {
+          width: 50%;
+          float: right;
+          text-align: right;
+          margin-right: 30px;
+          }
+
+          .dataTables_length{
+          width: 50%;
+          float: left;
+          text-align: left;
+          margin-left: 20px;
+          }
+
+          .table{
+            table-layout: fixed;
+            word-wrap: break-word;
+          }
+      </style>
+
+              <!-- Bootstrap core JavaScript-->
+        <script src="<?php $this->basePath();?>/tamplateadmin/vendor/jquery/jquery.min.js"></script>
+        <script src="<?php $this->basePath();?>/tamplateadmin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Core plugin JavaScript-->
+        <script src="<?php $this->basePath();?>/tamplateadmin/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+        <!-- Custom scripts for all pages-->
+      
+        <script src="<?php $this->basePath();?>/tamplateadmin/assets/js/plugins/notifications/sweet_alert.min.js"></script>
+        <script src="<?php $this->basePath();?>/tamplate/js/bootbox.all.min.js"></script>  
+        <!-- Page level custom scripts -->
+        <script src="<?php $this->basePath();?>/tamplateadmin/vendor/chart.js/Chart.min.js"></script>
+
+
+<body id="page-top">
+
+<!-- Page Wrapper -->
+  <div id="wrapper">
+  <!-- Sidebar -->
+    <ul  class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+      <!-- Sidebar - Brand -->
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?php echo $this->basePath('admin/antrianadmin') ?>">
+        <div class="sidebar-brand-icon rotate-n-15">
+          <i class="fas fa-laugh-wink"></i>
+        </div>
+          <div class="sidebar-brand-text mx-3 " style="font-size: 12px" >Admin Poli <?php echo $this->name; ?> </div>
+      </a>
+      <!-- Divider -->
+      <hr class="sidebar-divider my-0">
+
+     
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <!-- Heading -->
+      <div class="sidebar-heading">
+        Interface
+      </div>
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="<?php echo $this->basePath('admin/antrianadmin') ?>">
+          <i class="fas fa-fw fa-folder"></i>
+          <span  href="">Antrian</span>
+        </a>
+      </li> 
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+          <i class="fas fa-fw fa-table"></i>
+          <span>Kelola Antrian Pasien</span>
+        </a>
+        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">         
+            <a class="collapse-item"href="<?php echo $this->basePath('admin/antrianterlewat') ?>">Antrian Terlewat</a>
+            <a class="collapse-item"href="<?php echo $this->basePath('admin/antrianunregister') ?>">Antrian Unregister</a>
+
+          </div>
+        </div>
+      </li>
+
+     
+     
+
+      <!-- Divider -->
+      <hr class="sidebar-divider d-none d-md-block">
+
+      <!-- Sidebar Toggler (Sidebar) -->
+      <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+      </div>
+
+    </ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+      <div id="content">
+        <!-- Topbar -->
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+          <!-- Sidebar Toggle (Topbar) -->
+          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+            <i class="fa fa-bars"></i>
+          </button>
+
+          <!-- Topbar Navbar -->
+          <ul class="navbar-nav ml-auto">
+            
+
+            <!-- Nav Item - User Information -->
+            <li class="nav-item dropdown no-arrow">
+              <a class="nav-link dropdown-toggle" href="<?php echo $this->basePath('user/logout') ?>" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Logout
+              </a>
+            </li>
+          
+          </ul>
+        </nav> 
+        <div class="content">
+          <?= $this->content ?>
+        </div>
+      </div>
+    </div>
+  </div>
+      <?= $this->headScript()?>
+      <script src="<?php $this->basePath();?>/tamplateadmin/js/sb-admin-2.min.js"></script>
+      <script src="<?php $this->basePath();?>/js/jquery-clock-timepicker.min.js"></script>
+    
+
+      <script src="<?php $this->basePath();?>/tamplateadmin/vendor/datatables/jquery.dataTables.min.js"></script>
+      <script src="<?php $this->basePath();?>/tamplateadmin/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+</body>
+</html>

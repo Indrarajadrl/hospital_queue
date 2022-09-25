@@ -1,0 +1,212 @@
+
+    
+<div class="container-fluid">
+  <div class="col-xl-12 col-lg-12 col-md-12">
+      <div class="card o-hidden border-0 shadow-lg my-5">
+        <div class="card-body ">
+            <h1 class="h4 text-center text-gray-900 mb-4" style="font-size: 50px;font-weight: bold">Kelola Jadwal Dokter</h1>
+            <button type="button" class="btn btn-primary fa fa-plus " data-toggle="modal" data-target="#addData" id="tambahmodal"> Tambah</button>
+            <a type="button" class="btn btn-dark fa  "  href="<?php echo $this->basePath('superadmin/registrasialldok') ?>"> Lihat Seluruh Antrian</a>
+              <br>
+              <br>
+              <table class="table table-bordered" id="dataTable">
+                <thead>
+                  <tr class="table-infos">
+                        <th style="">NO</th>
+                        <th >Nama Poli</th>
+                        <th >Nama Dokter</th>
+                        <th>Ruangan</th>
+                        <th >Antrian Seluruh</th>
+                        <th>Jam Mulai</th>
+                        <th >Waktu Antrian</th>
+                        <th >Estimasi Selesai</th>
+                        <th >Create Date</th>
+                        <th >Action</th>
+                  </tr>
+                </thead>
+                      <tbody id="tableregisterdokter" >
+                      </tbody>
+                  </table>
+            
+        </div>
+      </div>
+  </div>
+</div>
+
+<!-- Trigger the modal with a button -->
+
+<!-- Modal -->
+<div id="addData" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Tambah Jadwal Dokter</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        
+      </div>
+      <div class="modal-body">
+      <form id="myForm" >
+           
+            <div class="form-group">
+                <label>Nama Poli</label>
+                <select name="nama_poli" id="poli"  class="form-control" require>
+                    <option disable selected> Pilih </option>
+
+                </select> 
+            </div>
+            <div class="form-group">
+                <label>Nama Dokter</label>
+                <select name="nama_dokter" id="dokter"  class="form-control" require>
+                <option disable selected> Pilih </option>
+
+                </select> 
+            </div>
+
+            <div class="form-group">
+                <label>No. Ruang</label>
+                <select name="nama_ruang" id="ruang" class="form-control form-control-sm" type="text" placeholder=".form-control-sm" require >
+                <option disabled selected> Pilih </option>
+                </select>
+            </div>  
+          
+                <div class="row col-lg-12">
+                      <div class="form-group">
+                          <label>Waktu Mulai Antrian</label>
+                            <p></p>
+                          <input style="width: 221px;" type="text" id="jam_mulai"   name="jam_mulai" class="form-control"  onchange="sumestimasi('ADD');"></input>
+                      </div>
+
+                    <div class="col-lg-6 sm-7">
+                      <div class="form-group">
+                          <label>Lama Antrian</label>
+                          <p></p>
+                          <input style="width: 230px;" type="text" id="waktu_antrian"   name="waktu_antrian" class="form-control"  onchange="sumestimasi('ADD');"></input>
+                      </div>
+                   
+                    </div>
+                </div>
+                
+                <div class="row col-lg-12">
+                      <div class="form-group">
+                          <label>Antrian Seluruh</label>
+                            <p></p>
+                          <input style="width: 221px;" type="number" id="antrian_all"   name="antrian_all" class="form-control"  oninput="sumestimasi('ADD');"></input>
+                      </div>
+
+                    <div class="col-lg-6 sm-7">
+                      <div class="form-group">
+                          <label>Estimasi Jam Selesai</label>
+                          <p></p>
+                          <input style="width: 230px;" type="text" id="estimasi_selesai"   name="estimasi_selesai" class="form-control" onkeyup="sumestimasi('ADD');" disabled></input>
+                      </div>
+                   
+                    </div>
+                </div>
+            <div class="modal-footer">
+         <button  button type="button" class="btn btn-primary" id="tambah">Tambah</button>
+         <button  button type="button" class="btn btn-danger" onclick="reset()">Reset</button>
+        <button type="submit" class="btn btn-default" data-dismiss="modal">Keluar</button>
+      </div>
+    </form>
+    </div>
+    </div>
+
+
+
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div id="editData" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Edit Jadwal Dokter</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>    
+      </div>
+      <div class="modal-body">
+      <form id="myForm" >
+           
+      <input type="hidden" id="id_register"  class="form-control" /></input>
+      <input type="text" id="antrian_before"  class="form-control" /></input>
+      <input type="hidden" id="id_dokter"  class="form-control" /></input>
+      <input type="hidden" id="id_poli"  class="form-control" /></input>
+      <input type="hidden" id="id_ruang"  class="form-control" /></input>
+      <input type="hidden" id="tanggal_before"  class="form-control" /></input>
+      <!-- <input type="text" id="antrian_before"  class="form-control" /></input> -->
+
+                  <div class="form-group">
+                      <label>Nama Poli</label>
+                          <div class="card" >
+                            <div  class="card-body" style="padding: 0.5rem;" id="poliedt" >
+                            </div>
+                          </div> 
+                      </select> 
+                  </div>
+                  <div class="form-group">
+                      <label>Nama Dokter</label>
+                      <div class="card" >
+                        <div  class="card-body" style="padding: 0.5rem;" id="dokteredt" >
+                        </div>
+                      </div> 
+                  </div>
+
+                  <div class="form-group">
+                      <label>No. Ruang</label>
+                      <div class="card" >
+                        <div  class="card-body" style="padding: 0.5rem;" id="ruangedt" >
+                        </div>
+                      </div> 
+                      </select>
+                  </div>
+                  
+                <div class="row col-lg-12">
+                      <div class="form-group">
+                          <label>Waktu Mulai Antrian</label>
+                            <p></p>
+                          <input style="width: 221px;" type="text" id="jam_mulaiedt"   name="jam_mulai" class="form-control"   onchange="sumestimasiedt('EDIT');" ></input>
+                      </div>
+
+                    <div class="col-lg-6 sm-7">
+                      <div class="form-group">
+                          <label>Lama Antrian</label>
+                          <p></p>
+                          <input style="width: 230px;" type="text" id="waktu_antrianedt"   name="waktu_antrian" class="form-control"  onchange="sumestimasiedt('EDIT');"></input>
+                      </div>
+                    </div>
+                </div>
+
+                     
+                <div class="row col-lg-12">
+                      <div class="form-group">
+                          <label>Antrian Seluruh</label>
+                            <p></p>
+                            <input type="number" id="antrian_alledt" name="antrian_alledt" class="form-control" oninput="sumestimasiedt('EDIT');" required /></input>
+                      </div>
+
+                    <div class="col-lg-6 sm-7">
+                      <div class="form-group">
+                          <label>Estimasi Jam Selesai</label>
+                          <p></p>
+                          <input style="width: 230px;" type="text" id="estimasi_selesaiedt"   name="estimasi_selesaiedt" class="form-control" onload="sumestimasiedt('EDIT');" disabled></input>
+                      </div>
+                    </div>
+                </div>
+           
+            <div class="modal-footer">
+         <button  button type="button" class="btn btn-primary" id="edit">Edit</button>
+         <button  button type="button" class="btn btn-danger" onclick="reset()">Reset</button>
+        <button type="submit" class="btn btn-default" data-dismiss="modal">Keluar</button>
+      </div>
+    </form>
+    </div>
+    </div>
+
+  </div>
+</div>
+

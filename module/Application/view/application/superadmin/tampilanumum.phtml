@@ -1,0 +1,42 @@
+<script type="text/javascript"> 
+    // 1 detik = 1000 
+     window.setTimeout("waktu()",1000); 
+    function waktu() {
+    var tanggal = new Date(); 
+    setTimeout("waktu()",1000); 
+    document.getElementById("tanggalku").innerHTML 
+    = tanggal.getHours()+":"+tanggal.getMinutes()+":"+tanggal.getSeconds(); 
+    } 
+</script> 
+
+
+
+    <!-- Page header -->
+    <div class="page-header" style="border-bottom: 0px solid #ddd0;">
+
+        <!-- Header content -->
+        <div class="page-header-content">
+            <div class="page-title">
+                 <div style=" text-align: center;color: #808080;font-family: Times New Roman, Times, serif;font-size: 50px;font-weight: 600;margin-top:-20px;">
+                         <span id="tanggalku"></span>
+                </div>
+                <div style="text-align: center;color: #808080;font-family: Times New Roman, Times, serif;font-size: 17px;font-weight: 600;margin-top:-20px;">
+                        <?php echo $this->today; ?>
+                </div>   
+            </div> 
+        </div>
+        <!-- /header content -->
+    </div>
+    <!-- /page header -->
+
+    
+
+	
+	<div id="box" class="wrap">
+    	
+    
+
+
+
+
+   

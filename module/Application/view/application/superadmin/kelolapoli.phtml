@@ -1,0 +1,153 @@
+<style>
+.form-field {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.form-field:last-child {
+  margin-right: 0;
+}
+
+
+
+</style>
+
+
+
+<div class="container-fluid">
+  <div class="col-xl-12 col-lg-12 col-md-12">
+      <div class="card o-hidden border-0 shadow-lg my-5">
+        <div class="card-body ">
+            <h1 class="h4 text-center text-gray-900 mb-4" style="font-size: 50px;font-weight: bold">Kelola Poli</h1>
+            <button type="button" class="btn btn-primary fa fa-plus btn-lg" data-toggle="modal" data-target="#addData"> Tambah</button>
+              <br>
+              <br>
+              <table class="table table-bordered" id="dataTable">
+                <thead>
+                  <tr>
+                     <th style="">NO</th>
+                      <th>Nama Poli</th>
+                      <th>Password</th>
+                      <th>Kode Poli</th>
+                      <th>Deskripsi Poli</th>
+                      <th>Gambar Poli</th>
+                      <th>Action</th>
+                  </tr>
+                </thead>
+                      <tbody id="tablepoli" >
+                      </tbody>
+                  </table>
+            
+        </div>
+      </div>
+  </div>
+</div>
+<!-- Trigger the modal with a button -->
+
+<!-- Modal -->
+<div id="addData" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+      <h4 class="modal-title">Tambah Data Poli</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+      <form id="myForm" >
+
+      <!-- <input type="hidden" id="id_poli"  class="form-control" /></input> -->
+
+            <div class="form-group">
+                <label>Nama Poli (Username)</label>
+                <input type="input" id="nama_poli" name="nama_poli" class="form-control" placeholder="Nama Poli (Username)" required ></input>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Pasword</label>
+                <input type="password" id="password" name="password" class="form-control" placeholder="Password" required ></input>
+                </select>
+            </div>
+            <input style="margin-left:20px" type="checkbox" onclick="changetype()"> <a>Show Password</a>
+          <br>
+            <div class="form-group">
+                <label>Kode Poli</label>
+                <input type="input" id="kode_poli" name="kode_poli" class="form-control" placeholder="Kode Poli" required ></input>
+            </div>
+            <div class="form-group">
+                <label>Deskripsi Poli</label>
+                <textarea type="input" style="height:100px;" id="deskripsi_poli" name="deskripsi_poli" class="form-control" placeholder="Deskripsi Poli" required ></textarea>
+            </div>
+            <div class="form-group " >
+                <label>Gambar Poli</label>
+                <input type="file" name="gambar_poli" id="gambar_poli"  class="form-control-file">
+            </div>
+
+            
+            <div class="modal-footer">
+         <button  type="submit" class="btn btn-primary" id="tambah">Tambah</button>
+         <button  type="button" class="btn btn-danger" onclick="reset()">Reset</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Keluar</button>
+      </div>
+    </form>
+    </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="editData" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Edit Data Poli</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>    
+      </div>
+      <div class="modal-body">
+      <form id="myFormEdit" >
+      
+            <input type="hidden" id="id_poli"  class="form-control" /></input>
+            <input type="hidden" id="iduser"  class="form-control" /></input>
+            <!-- <input type="input" id="nama_poli2"  class="form-control" /></input> -->
+
+            <div class="form-group">
+                <label>Nama Poli</label>
+                <input type="input" id="nama_poliEdt" name="nama_poli" class="form-control" placeholder="Nama Poli" required ></input>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Pasword</label>
+                <input type="password" id="passwordedt" name="password" class="form-control" placeholder="Password" required ></input>
+                </select>
+            </div>
+            <input style="margin-left:20px" type="checkbox" onclick="changetypee()"> <a>Show Password</a>
+          <br>
+            <div class="form-group">
+                <label>Kode Poli</label>
+                <input type="input" id="kode_poliEdt" name="kode_poli" class="form-control" placeholder="Kode Poli" required></input>
+            </div>
+            <div class="form-group">
+                <label>Deskripsi Poli</label>
+                <textarea type="input" style="height:100px;" id="deskripsi_poliEdt" name="deskripsi_poli" class="form-control" placeholder="Deskripsi Poli" required ></textarea>
+            </div>
+
+          
+            <div class="form-group ">
+                <label>Gambar Poli</label>
+                <input type="file" name="gambar_poliedt" id="gambar_poliedt" class="form-control-file"></input>
+            </div>
+            <div class="modal-footer">
+         <button  button type="button" class="btn btn-primary" id="edit">Edit</button>
+         <button  button type="button" class="btn btn-danger" onclick="reset()">Reset</button>
+        <button type="submit" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </form>
+    </div>
+    </div>
+
+  </div>
+</div>

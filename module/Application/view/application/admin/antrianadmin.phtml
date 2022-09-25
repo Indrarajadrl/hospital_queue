@@ -1,0 +1,108 @@
+
+<div class="container"></div>
+    <form class="form-inline">
+    
+        <div class="form-group form-control-lg">
+            <label>Pilih dokter</label> <br>
+            <select id="dokter" name="nama_dokter" class="form-control">
+            <option disabled selected> Pilih </option>
+            </select>
+        </div>
+        <!-- <button type="button" id="pilihno" class="btn btn-primary" > Daftar Antrian</button> -->
+    </form>
+</div>
+  <div><span style="visibility:hidden" id="nama_ruang"></span></div>
+
+<div class="row col-lg-12">
+    <div class="col-lg-7 ">
+        <div class="card 0-hidden border-0 shadow-lg my-3">
+            <div class="card-header">
+                <h6 class="panel-title"><i class="icon-cog3 position-left"></i> Nomor Antrian</h6>
+            </div>
+                <div class="text-center content-group">
+                    <div><input type="hidden" value="nomer antrian" id="text-to-speech" placeholder="Enter text to speak..."/></div>
+                    <h1 class="error-title" style="padding-top: 30px;padding-bottom: 30px; font-weight: bold;font-size:200px;font-family: Times New Roman, Times, serif;color:	#808080"><span id="no_antrian"></span></h1>
+                 
+                </div>
+                <div><input type="hidden" value="no_antrian" id="no_antrian" /></div>
+                <div><input type="hidden" value="nama_ruang" id="nama_ruang" /><span style="visibility:hidden" id="nama_ruang"></span></div>
+        </div>
+    </div>
+
+    <div class="col-lg-5 ">
+        <div class="card 1-hidden border-1 shadow-lg my-3">
+            <div class="card-header">
+                    <h6 class="panel-title"><i class="icon-cog3 position-left"></i> Aksi Antrian</h6>
+                
+
+                </div>
+                
+
+                <div class="card-body">
+                    <div style="padding-top: 15px">
+
+                    </div>
+                    <button type="button" class="btn bg-dark btn-float btn-float-lg col-lg-12 " id="btnNext" style="margin-bottom: 20px;font-size:30px;"disabled ><i class="icon-next2" style="font-size:30px;color:#fff;">
+                        </i> <span style="color:#fff;">Next</span>
+                    </button>
+
+                    <div class="row">
+                        <div class="col-lg-6 sm-3">
+                            <button type="button" class="btn bg-info  btn-float btn-float-lg col-lg-12 " id="btnCall" style="margin-bottom: 20px;font-size:30px;" disabled><i class="icon-phone-wave" style="font-size:30px;color:#fff;"">
+                                </i> <span style="color:#fff;" >Call</span>
+                            </button>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <button type="button" class="btn btn-primary  btn-float btn-float-lg col-lg-12 " id="btnServed" style="margin-bottom: 20px;font-size:30px;" disabled><i class="icon-accessibility2" style="font-size:30px;">
+                                </i> <span>Served</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="row" style="padding-bottom:15px">
+                        <div class="col-lg-6">
+                            <button type="button" class="btn btn-danger  btn-float btn-float-lg col-lg-12" id="btnMissed" style="margin-bottom: 20px;font-size:30px;" disabled><i class="icon-phone-slash" style="font-size:30px;">
+                                </i> <span>Missed</span>
+                            </button>
+                        </div>
+                        <div class="col-lg-6">
+                            <button type="button" class="btn btn-success  btn-float btn-float-lg col-lg-12 " id="btnDone" style="margin-bottom: 20px;font-size:30px;" disabled><i class="icon-checkmark4" style="font-size:30px;">
+                                </i> <span>Done</span>
+                            </button>            
+                        </div>
+                    </div>
+                    
+                </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+    <div class="col-lg-12">
+    <div class="card 0-hidden border-0 shadow-lg my-3">
+            <div class="card-header">
+                <h1 class="panel-title " style="font-family: Times New Roman, Times, serif;text-align:center">Daftar Antrian Hari ini<a class="heading-elements-toggle"></a></h1>
+            </div>
+                <table class="table table-bordered" >
+                        <thead class="bgHeader" style="border-top: 2px solid #ccc;">
+                        <tr>
+                            <th style="width: 70px">NO</th>
+                            <th colspan=""  class=" thLeftText">NO Antrian Pasien</th>
+                            <th colspan=""  class=" thLeftText">Nama Pasien</th>
+                            <th colspan=""  class=" thLeftText">Nama Dokter</th>
+                            <th colspan=""  class=" thLeftText">Nama Poli</th>
+                            <th colspan=""  class=" thLeftText">Status</th>
+                        </tr>
+                        </thead>
+                      <tbody id="antrianadmin" >
+                      
+                      </tbody>
+                  </table>
+            
+            </div>
+        </div>
+    </div>
+

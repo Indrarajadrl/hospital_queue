@@ -1,0 +1,195 @@
+<?= $this->doctype() ?>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <?= $this->headTitle('Medical')->setSeparator(' - ')->setAutoEscape(false) ?>
+
+        <?= $this->headMeta()
+            ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+            ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+        ?>
+
+        <!-- Le styles -->
+        <?= $this->headLink(['rel' => 'icon', 'type' => '/tamplate/img/favicon.png', 'href' => $this->basePath() . '/tamplate/img/favicon.png'])
+            ->prependStylesheet($this->basePath('/tamplate/css/style.css'))
+            ->prependStylesheet($this->basePath('/tamplate/css/bootstrap.min.css'))
+            ->prependStylesheet($this->basePath('/tamplate/css/animate.css'))
+            ->prependStylesheet($this->basePath('/tamplate/css/owl.carousel.min.css'))
+            ->prependStylesheet($this->basePath('/tamplate/css/themify-icons.css'))
+            ->prependStylesheet($this->basePath('/tamplate/css/flaticon.css'))
+            ->prependStylesheet($this->basePath('/tamplate/css/magnific-popup.css'))
+            ->prependStylesheet($this->basePath('/tamplateadmin/css/swich-alert.css'))
+            ->prependStylesheet($this->basePath('/tamplateadmin/assets/css/icons/icomoon/styles.css'))
+            ->prependStylesheet($this->basePath('/tamplate/css/nice-select.css'))
+            ->prependStylesheet($this->basePath('/tamplate/css/bootstrap.min.css'))
+            ->prependStylesheet($this->basePath('/tamplate/css/bootstrap.min.css'))
+            ->prependStylesheet($this->basePath('/tamplate/css/demo.css'))
+            ->prependStylesheet($this->basePath('/tamplate/css/intlTelInput.css'))
+            
+        ?>
+</head>
+
+<style>
+            #seat-antrian{ 
+            width:auto; height:500px; 
+            font-size:100%;
+            }
+            .cell { 
+            margin-top:10px;
+            width:100px; height:45px;
+            background-color:#4682b4;
+            text-align:center;
+            list-style-type: none;
+            color:#000000;
+            float:left; margin:5px;
+            margin-bottom:1px;
+            }
+            #h6a {
+            display: block;
+            
+            margin-block-start: 0em;
+            margin-block-end: 0em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            font-weight: bold;
+            }
+        </style>
+
+<body>
+    <!--::header part start::-->
+    <header class="main_menu home_menu">
+     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <a class="navbar-brand" href="<?php echo $this->basePath('queue/beranda');?>"> <img src="<?php echo $this->basePath();?> /tamplate/img/logo.png" alt="logo"> </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse main-menu-item justify-content-center"
+                            id="navbarSupportedContent">
+                            <ul class="navbar-nav align-items-center">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="<?php echo $this->basePath('queue/beranda') ?>">Beranda</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="<?php echo $this->basePath('queue/cekdatapasien') ?>">Registrasi Antrian </a>
+                                </li>
+                               
+                                <li class="nav-item">
+                                    <a class="nav-link" href="<?php echo $this->basePath('queue/dokter') ?>">Doctors</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="<?php echo $this->basePath('queue/poli') ?>">Poli</a>
+                                </li>
+                        
+                                <!-- <li class="nav-item">
+                                    <a class="nav-link "  href="<?php echo $this->basePath('user/login') ?>">Login</a>
+                                </li>
+         -->
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <!-- Header part end-->
+
+   <!-- Main content -->
+   <div class="content-wrapper">
+
+          <!-- Content area -->
+            <div class="content">
+                 <?= $this->content ?>
+            </div>
+        <!-- /content area -->
+    </div>
+<!-- /main content -->
+              <!-- footer part start-->
+    <footer class="footer-area">
+        <div class="footer section_padding">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-xl-2 col-md-4 col-sm-6 single-footer-widget">
+                        <a href="#" class="footer_logo"> <img src="<?php $this->basePath('queue/beranda') ?>/tamplate/img/logo.png" alt="#"> </a>
+                        <p>Hidup sehat adalah hidup sejahtera dan bahagia yang berawal dari diri kita sendiri</p>
+                       
+                    </div>
+                    <div class="col-xl-9 col-sm-6 col-md-4 single-footer-widget">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="<?php echo $this->basePath('queue/beranda') ?>">Beranda</a></li>
+                            <li><a href="<?php echo $this->basePath('queue/pocekdatapasienli') ?>">Registrasi Antrian</a></li>
+                            <li><a  href="<?php echo $this->basePath('queue/dokter') ?>">Dokter</a></li>
+                            <li><a href="<?php echo $this->basePath('queue/poli') ?>">Poli</a></li>
+                            <li><a href="<?php echo $this->basePath('user/login') ?>">Login</a></li>
+                           
+                        </ul>
+                    </div>
+                 
+                    
+
+                                <div class="info"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright_part">
+            <div class="container">
+                <div class="row align-items-center">
+                   
+                   
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- footer part end-->
+
+
+<!-- jquery plugins here-->
+
+    <script src="<?php echo $this->basePath();?>/tamplate/js/jquery-1.12.1.min.js"></script>
+
+    <script src="<?php echo $this->basePath();?>/tamplate/js/popper.min.js"></script>
+
+    <script src="<?php echo $this->basePath();?>/tamplate/js/bootstrap.min.js"></script>
+
+    <script src="<?php echo $this->basePath();?>/tamplate/js/owl.carousel.min.js"></script>
+    <script src="<?php echo $this->basePath();?>/tamplate/js/jquery.nice-select.min.js"></script>
+
+    <script src="<?php echo $this->basePath();?>/tamplate/js/jquery.ajaxchimp.min.js"></script>
+    <script src="<?php echo $this->basePath();?>/tamplate/js/jquery.form.js"></script>
+    <script src="<?php echo $this->basePath();?>/tamplate/js/jquery.validate.min.js"></script>
+    <script src="<?php echo $this->basePath();?>/tamplate/js/mail-script.js"></script>
+    <script src="<?php $this->basePath();?>/tamplateadmin/assets/js/plugins/notifications/sweet_alert.min.js"></script>
+    
+ 
+    <!-- <script src="<?php echo $this->basePath();?>/tamplate/js/bootbox.all.min.js"></script> -->
+    <!-- <script src="<?php echo $this->basePath();?>/tamplate/js/custom.js"></script> -->
+    
+  
+  
+    <!-- <script src="<?php echo $this->basePath();?>/tamplate/keyboard/assets/plugins/jquery.virtual_keyboard"></script> -->
+
+    <?= $this->headScript()
+               ->prependFile($this->basePath('js/bootstrap.min.js'))
+               ->prependFile($this->basePath('js/jquery-3.1.0.min.js'))
+               ->prependFile($this->basePath('/tamplate/js/bootbox.all.min.js'))
+                //->prependFile($this->basePath('/js/jquery.nicescroll.js'))
+            //     ->prependFile($this->basePath('/js/jquery.seat-charts.js'))
+            //     ->prependFile($this->basePath('/js/jquery.seat-charts.min.js'))
+            //     ->prependFile($this->basePath('/js/jquery-1.11.0.min.js'))
+            //    //->prependFile($this->basePath('/js/scripts.js'))
+		?>
+        <?= $this->inlineScript() ?>
+</body>
+
+</html>

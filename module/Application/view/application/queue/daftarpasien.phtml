@@ -1,0 +1,102 @@
+<style>
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+</style>
+
+
+  <hr>
+  <hr>
+  <hr>
+  <hr>
+ 
+    <section class="breadcrumb_part breadcrumb_bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb_iner">
+                        <div class="breadcrumb_iner_item">
+                            <h2>Daftar </h2>
+                            <h2>Pasien</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- breadcrumb start-->
+
+         
+    <div class="container">
+        <div class="card" >
+            <div class="card-header">
+                    <h2> Silahkan Isi Data Diri Pasien</h2>
+                    </div>
+                <div class="card-body">
+        
+                <form id="myForm">
+                    <input type="hidden" id="iInput"  class="form-control" /></input>
+
+                    <div class="form-group">
+                        <label><h5>No Induk Kependudukan (NIK)</h5></label>
+                        <input type="number" id="ktp" class="form-control" placeholder="No Induk Kependudukan (NIK)" max="9999999999999999" maxlength="16"></input>
+                    </div>
+
+                    <div class="form-group">
+                        <label><h5>Nama Pasien</h5></label>
+                        <input type="text" id="nama"  class="form-control"   placeholder="Nama Lengkap" ></input>
+                    </div>
+                    <!-- <div class="form-group">
+                        <label><h5>Jenis Kelamin</h5></label> <br>
+                            <input type="radio" id="male" name="gender" value="male">
+                            <label for="male"><h5>Laki-laki </h5></label>
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="female"><h5>Perempuan </h5></label>
+
+                    </div> -->
+
+                    <div class="form-group ">
+                        <label><h5>Tempat Lahir</h5></label>
+                        <textarea  type="text" id="tempat_lahir"  class="form-control " placeholder="Tempat Lahir" ></textarea >
+                    </div>
+
+                    <div class="form-group">
+                        <label><h5>Tanggal Lahir</h5></label>
+                        <input type="date" id="tanggal_lahir"  class="form-control" /></input>
+                    </div>
+                    <div class="form-group" >
+                        <label><h5>Alamat</h5></label>
+                        <textarea  type="text" id="alamat" rows="3" class="form-control" placeholder="Alamat"/></textarea >
+                    </div>
+
+                    <div class="form-group">
+                        <label><h5>No HP</h5></label>
+                        <input type="number" id="no_hp"  class="form-control " placeholder="No Handphone" maxlength="13" /></input>
+                    </div>
+                   
+                    
+
+                    
+                </form>
+            </div>
+                <div class="card-footer" >
+                     <p class="card-text"></p>
+                        <button type="button"  class="btn btn-primary" id="tambahdata" style="float: right;"> Daftar Pasien</button>
+                </div>    
+        
+        </div>
+    </div> 
+    <br>
+
+
+
+
+
+
+
+
+

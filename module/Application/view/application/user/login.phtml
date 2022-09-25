@@ -1,0 +1,25 @@
+    <div class=container>
+       
+                <form method="post" id="login" action="<?php echo $this->basePath()?>/user/authenticate">
+                    
+                 
+                    <div class="container" onclick="onclick">
+                        <div class="top"></div>
+                        <div class="bottom"></div>
+                        <div class="center">
+                            <h2>Please Login</h2>
+                            <input type="text" id="username" name="username" class="form-control form-control-user" placeholder="Username" required />
+                            <input type="password" id="passwd" name="passwd" class="form-control form-control-user" placeholder="Password" required />
+                            <div style="font-weight: bold;"><?php if(isset($this->message)) { echo $this->message; }?></div>
+                              <button type="submit" class="btn btn-primary btn-user btn-block" style="display: none;">
+                                      
+                                    </button>
+                                </div>
+                            <h2>&nbsp;</h2>
+                        </div>
+                    </div>
+    
+                      
+    
+                    </form>
+</div>

@@ -1,0 +1,293 @@
+<style>
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.buttons input[type="radio"] {
+    display: none;
+ 
+}
+.buttons input[type="picked"] {
+    display: none;
+}
+.buttons input[type="done"] {
+    display: none;
+}
+
+input[type="radio"]:checked + label {
+  
+    padding: 15px;
+    color: #fff;
+    font-size: 25px;
+    background: #7FFF00;
+    width : 55px;
+    text-align:center;
+
+}
+
+
+input[type="radioo"] + label {
+    padding: 15px;
+    background: #fff;
+    color: black;
+    font-size: 25px;
+    width: 1080px;
+    text-align: center;
+
+}
+
+
+input[type="radio"] + label {
+    padding: 15px;
+    background: #007bff;
+    color: #fff;
+    font-size: 25px;
+    width : 55px;
+    text-align:center;
+ 
+
+}
+input[type="picked"] + label {
+    padding: 15px;
+    background: #FF0000;
+    color: #fff;
+    font-size: 25px;
+    width : 55px;
+    cursor:not-allowed; 
+    text-align:center;
+    
+ 
+
+}
+
+
+input[type="done"] + label {
+    padding: 15px;
+    background: #808080;
+    color: #fff;
+    font-size: 25px;
+    width : 55px;
+    cursor:not-allowed; 
+    text-align:center;
+    
+ 
+
+}
+
+
+ 
+.table1 tr th{
+    background: #007bff;
+    color: #fff;
+}
+ 
+.table1, th, td {
+    padding: 10px 20px;
+    text-align: center;
+    
+}
+ 
+
+.table2 tr th{
+    background: #7FFF00;
+    color: #fff;
+}
+ 
+.table2, th, td {
+    padding: 10px 20px;
+    text-align: center;
+    
+}
+ 
+
+ 
+.table3 tr th{
+    background: #FF0000;
+    color: #fff;
+}
+ 
+.table3, th, td {
+    padding: 10px 20px;
+    text-align: center;
+    
+}
+
+
+ 
+.table4 tr th{
+    background: #808080;
+    color: #fff;
+}
+ 
+.table4, th, td {
+    padding: 10px 20px;
+    text-align: center;
+    
+}
+ </style>
+
+<hr>
+  <hr>
+  <hr>
+  <hr>
+ 
+    <section class="breadcrumb_part breadcrumb_bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb_iner">
+                        <div class="breadcrumb_iner_item">
+                            <h2>Pilih</h2>
+                            <h2>Antrian</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- breadcrumb start-->
+
+         
+    <div class="container">
+        <div class="card" >
+        <div class="card-header">
+                <h2> Silahkan Pilih Poli dan Dokter</h2>
+                </div>
+            <div class="card-body">
+                <form id="myForm">
+
+                    <input type="hidden" id="id_pasien"  class="form-control" disabled/></input>
+                    
+                    <div class="form-group">
+                        <label> <h5>No Rekam Medis</h5></label><br>
+                        <input type="number" id="no_rekam_medis" placeholder="No Rekam Medis"  class="form-control" max="999999999999999" maxlength="8" style="width: 950px;display:inline;"></input>
+                        <button type="button" class="btn btn-primary"  style="float: right;" id="cekdata"> Cek Daata Pasien</button>
+                    </div>
+                    <div class="form-group">
+                        <label> <h5>KTP</h5></label>
+                        <input type="text" id="ktp"  class="form-control"  disabled   /></input>
+                    </div>
+
+                    <div class="form-group">
+                        <label> <h5>Nama pasien</h5></label>
+                            <input type="text" id="nama"  class="form-control" disabled/></input>
+                        </div>
+                        <div class="form-group ">
+                            <input  type="hidden" id="tempat_lahir"  class="form-control "disabled ></input>
+                        </div>
+
+                        <div class="form-group">
+                        <label> <h5>Tanggal Lahir</h5></label>
+                            <input type="text" id="tanggal_lahir"  class="form-control"disabled /></input>
+                        </div>
+                        <div class="form-group" >
+                            <input  type="hidden" id="alamat" rows="3" class="form-control"disabled ></input>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="hidden" id="no_hp"  class="form-control "disabled  ></input>
+                        </div>
+                    
+                    <div class="form-group">
+                        <label> <h5>Pilih Poli </h5></label>
+                        <select name="nama_poli" id="poli"  class="form-control">
+                        <option disabled selected> Pilih </option>
+                        </select> 
+                    </div>
+                    <div class="form-group">
+                        <label> <h5>Pilih Dokter </h5></label>
+                        <select id="dokter" name="nama_dokter" class="form-control">
+                        <option disabled selected> Pilih </option>
+                        
+                        </select>
+                    
+                    </div>
+                </form>
+                </div>
+                 <div class="card-footer" >
+                    <p class="card-text"></p>
+                    <button type="button" id="pilihno" class="btn btn-primary"  data-toggle="modal" data-target="#pilihantrian" style="float: right;"> Daftar Antrian</button>
+                </div>    
+        
+        </div>
+    </div> 
+    <br>
+
+<!-- Trigger the modal with a button -->
+
+<!-- Modal -->
+  <div class="modal fade modalPalingesar" id="pilihantrian" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="-close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Daftar Antrian</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row  col-lg-12 antrian" id="seat">
+      </div> 
+       <div class="modal-footer">
+            <div class="container"  >  
+                <div class="row col-lg-12">
+                    <div class="col-sm-3">
+                       <h6>Antrian Belum Dipilih</h6>
+                    </div>
+                    <div class="col-sm-1">
+                        <h6>:</h6>
+                    </div>
+                    <div>
+                        <table class="table1"><tr><th></th></tr></table>
+                    </div>
+                </div>
+                <div class="row col-lg-12">
+                    <div class="col-sm-3">
+                        <h6>Antrian Yang Dipilih</h6> 
+                    </div>
+                    <div class="col-sm-1">
+                        <h6>:</h6>
+                    </div>
+                    <div>
+                        <table class="table2"><tr><th></th></tr></table>
+                    </div>
+                </div>
+                <div class="row col-lg-12">
+                    <div class="col-sm-3">
+                        <h6>Antrian Telah Diisi</h6>
+                    </div>
+                    <div class="col-sm-1">
+                        <h6>:</h6>
+                    </div>
+                    <div>
+                        <table class="table3"><tr><th></th></tr></table>
+                    </div>
+                </div>
+                <div class="row col-lg-12">
+                    <div class="col-sm-3">
+                        <h6>Antrian Telah Selesai</h6>
+                    </div>
+                    <div class="col-sm-1">
+                        <h6>:</h6>
+                    </div>
+                    <div>
+                        <table class="table4"><tr><th></th></tr></table>
+                    </div>
+                </div>
+            </div>
+         <button  button type="button" class="btn btn-primary" id="tambah">Selesai</button>
+        <button type="button" id="close" class="btn btn-default" data-dismiss="modal">Close</button>
+        
+      </div>
+      </div>
+    </div>
+    </div>
+

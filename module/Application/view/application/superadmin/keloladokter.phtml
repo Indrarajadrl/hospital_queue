@@ -1,0 +1,136 @@
+<div class="container-fluid">
+  <div class="col-xl-12 col-lg-12 col-md-12">
+      <div class="card o-hidden border-0 shadow-lg my-5">
+        <div class="card-body  ">
+            <h1 class="h4 text-center text-gray-900 mb-4" style="font-size: 50px;font-weight: bold">Kelola Dokter</h1>
+            <button type="button" class="btn btn-primary fa fa-plus btn-lg" data-toggle="modal" data-target="#addData" id="tambahmodal"> Tambah</button>
+            <button type="button" class="btn btn-info fa  btn-lg"  style="float: right;" id="update"> Update Seluruh Kondisi </button>
+
+              <br>
+              <br>
+
+
+
+              
+              <table class="table table-bordered" id="dataTable">
+                <thead>
+                  <tr>
+                  <tr class="table-infos">
+                      <th style="width: 70px">NO</th>
+                        <!-- <th colspan=""  class=" thLeftText">Id Poli</th> -->
+                        <th colspan=""  class=" thLeftText">Nama Poli</th>
+                        <th colspan=""  class=" thLeftText">Nama Dokter</th>
+                        <th colspan=""  class=" thLeftText">Kode Dokter</th>
+                        <th colspan=""  class=" thLeftText">Gambar Dokter</th>
+                        <th colspan=""  class=" thLeftText">Kondisi Dokter</th>
+                        <th colspan=""  class=" thLeftText">Action</th>
+                  </tr>
+                </thead>
+                      <tbody id="tabledokter" >
+                      </tbody>
+                  </table>
+            
+        </div>
+      </div>
+  </div>
+</div>
+
+
+
+<!-- Trigger the modal with a button -->
+
+<!-- Modal -->
+<div id="addData" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+      <h4 class="modal-title">Tambah Data Dokter</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+      <form id="myForm" >
+            
+            <div class="form-group">
+                <label>Nama Poli</label>
+                <select name="poli" id="poli"  class="form-control" >
+                    <option disable selected> Pilih </option>
+
+                </select> 
+            </div>
+            <div class="form-group">
+                <label>Nama Dokter</label>
+                <input type="input" id="nama_dokter" name="nama_dokter" class="form-control" placeholder="Nama Dokter" /></input>
+            </div>
+            <div class="form-group">
+                <label>Kode Dokter</label>
+                <input type="input" id="kode_dokter" name="kode_dokter" class="form-control" placeholder="Kode Dokter" /></input>
+            </div>
+    
+            <div class="form-group " >
+                <label>Gambar Dokter</label>
+                <input type="file" name="gambar_dokter" id="gambar_dokter"  class="form-control-file">
+            </div>
+           
+            <div class="modal-footer">
+         <button  button type="button" class="btn btn-primary" id="tambah">Tambah</button>
+         <button  button type="button" class="btn btn-danger" onclick="reset()">Reset</button>
+        <button type="submit" class="btn btn-default" data-dismiss="modal">Keluar</button>
+      </div>
+    </form>
+    </div>
+    </div>
+
+  </div>
+</div>
+
+<div id="Editdata" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+      <h4 class="modal-title">Edit Data Dokter</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+      <form id="myForm" >
+      
+          <input type="hidden" id="id_dokter"  class="form-control" /></input>
+
+            <div class="form-group">
+                <label>Nama Poli</label>
+                <select name="nama_poliedt" id="poliedt"  class="form-control" >
+                
+                </select> 
+            </div>
+            <div class="form-group">
+                <label>Nama Dokter</label>
+                <input type="input" id="nama_dokteredt" name="nama_dokter" class="form-control" required /></input>
+            </div>
+            <div class="form-group">
+                <label>Kode Dokter</label>
+                <input type="input" id="kode_dokteredt" name="kode_dokter" class="form-control" required /></input>
+            </div>
+           
+
+            <div class="form-group " >
+                <label>Gambar Dokter</label>
+                <input type="file" name="gambar_dokteredt" id="gambar_dokteredt"  class="form-control-file">
+            </div>
+           
+
+           
+            <div class="modal-footer">
+         <button  button type="button" class="btn btn-primary" id="edit">Edit</button>
+         <button  button type="button" class="btn btn-danger" onclick="reset()">Reset</button>
+        <button type="submit" class="btn btn-default" data-dismiss="modal">Keluar</button>
+      </div>
+    </form>
+    </div>
+    </div>
+
+  </div>
+</div>
+

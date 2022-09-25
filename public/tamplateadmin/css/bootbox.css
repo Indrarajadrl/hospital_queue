@@ -1,0 +1,13 @@
+/* ------------------------------------------------------------------------------
+ *
+ *  # Bootbox modal extension
+ *
+ *  Styles for bootbox.min.js - advanced Bootstrap modals
+ *
+ *  Version: 1.0
+ *  Latest update: Oct 9, 2015
+ *
+ * ---------------------------------------------------------------------------- */
+ .bootbox .modal-title {
+  font-size: 15px;
+}

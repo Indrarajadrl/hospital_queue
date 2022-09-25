@@ -1,0 +1,100 @@
+<?= $this->doctype() ?>
+
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>RUMAH SAKIT</title>
+
+      <!-- Custom fonts for this template-->
+    <?= $this->headLink(['rel' => 'sylesheet', 'type' => 'text/css' , 'href' => $this->basePath() . '/tamplate/img/favicon.png'])
+            ->prependStylesheet($this->basePath('/tamplateadmin/vendor/fontawesome-free/css/all.min.css'))
+            ?>
+  
+    <?= $this->headLink(['rel' => 'sylesheet', 'type' => 'text/css'])
+                ->prependStylesheet($this->basePath('/tamplateadmin/css/sb-admin-2.min.css'))
+         
+           ->prependStylesheet($this->basePath('tamplateadmin/assets/css/core.css'))
+            // ->prependStylesheet($this->basePath('tamplateadmin/assets/css/components.css'))
+             ->prependStylesheet($this->basePath('tamplateadmin/assets/css/bootstrap.css'))
+             ->prependStylesheet($this->basePath('/css/dasboard.css'))
+        //  ?>
+      
+    </head>
+    <style>
+        body {
+            width: 100wh;
+            height: 90vh;
+            color: #fff;
+            background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+            background-size: 400% 400%;
+            -webkit-animation: Gradient 15s ease infinite;
+            -moz-animation: Gradient 15s ease infinite;
+            animation: Gradient 15s ease infinite;
+            overflow: hidden;
+           
+         
+        }
+        
+
+        @-webkit-keyframes Gradient {
+            0% {
+                background-position: 0% 50%
+            }
+            50% {
+                background-position: 100% 50%
+            }
+            100% {
+                background-position: 0% 50%
+            }
+        }
+
+        @-moz-keyframes Gradient {
+            0% {
+                background-position: 0% 50%
+            }
+            50% {
+                background-position: 100% 50%
+            }
+            100% {
+                background-position: 0% 50%
+            }
+        }
+
+        @keyframes Gradient {
+            0% {
+                background-position: 0% 50%
+            }
+            50% {
+                background-position: 100% 50%
+            }
+            100% {
+                background-position: 0% 50%
+            }
+        }
+    </style>
+<body>
+  
+   
+            <?= $this->content ?>
+         
+          <!-- Core JS files -->        <script type="text/javascript" src="<?php $this->basePath();?> /tamplateadmin/assets/js/plugins/notifications/sweet_alert.min.js"></script>
+	    <!-- /core JS files -->
+
+        <?= $this->headScript()
+             ->prependFile($this->basePath('js/bootstrap.min.js'))
+            ->prependFile($this->basePath('js/jquery-3.1.0.min.js'))
+            ->prependFile(('https://js.pusher.com/7.0/pusher.min.js'))
+        
+          
+          
+			
+		
+		?>
+        <?= $this->inlineScript() ?>
+    </body>
+</html>
